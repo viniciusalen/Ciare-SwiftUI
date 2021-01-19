@@ -19,7 +19,8 @@ struct ContentView: View {
             VStack(alignment: .leading) {
                 Text("Company")
                     .font(.headline)
-                    .padding(.all)
+                    .padding(.top)
+                    .padding(.horizontal)
                 CustomTextField(placeholder: "Brand name")
                 
                 Text("Business Type")
@@ -36,7 +37,7 @@ struct ContentView: View {
                 CustomTextField(placeholder: "Business area")
                 
                 
-                if rawValue == 1{
+                if rawValue == 0 || rawValue == 2{
                     CustomTextField(placeholder: "Location")
                 }
 
