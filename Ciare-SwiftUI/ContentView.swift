@@ -8,9 +8,44 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var brandName = ""
+    @State var rawValue = 0
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+
+        
+        NavigationView{
+            VStack(alignment: .leading) {
+                Text("Company")
+                    .font(.headline)
+                    .padding(.all)
+                CustomTextField(placeholder: "Brand name")
+                
+                Text("Business Type")
+                    .font(.headline)
+                    .padding(.all)
+    
+                Picker("Business Type", selection: $rawValue) {
+                    Text("Physical").tag(0)
+                    Text("Digital").tag(1)
+                    Text("Both").tag(2)
+                    
+                }.pickerStyle(SegmentedPickerStyle())
+                
+                CustomTextField(placeholder: "Business area")
+                
+                
+                if rawValue == 1{
+                    CustomTextField(placeholder: "Location")
+                }
+
+    
+                Spacer()
+            }.padding(.horizontal)
+            .navigationBarTitle("Register")
+        }
+        
     }
 }
 
@@ -19,3 +54,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView().previewDevice(PreviewDevice(rawValue: "iPhone 11"))
     }
 }
+
+

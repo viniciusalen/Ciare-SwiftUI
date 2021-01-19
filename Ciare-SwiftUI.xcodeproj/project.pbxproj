@@ -14,6 +14,7 @@
 		1222FDA025B72458004CCB3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1222FD9F25B72458004CCB3A /* Assets.xcassets */; };
 		1222FDA325B72458004CCB3A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1222FDA225B72458004CCB3A /* Preview Assets.xcassets */; };
 		1222FDA625B72458004CCB3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1222FDA425B72458004CCB3A /* LaunchScreen.storyboard */; };
+		12C8976725B732BB0018E7FF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C8976625B732BB0018E7FF /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1222FDA225B72458004CCB3A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1222FDA525B72458004CCB3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1222FDA725B72458004CCB3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12C8976625B732BB0018E7FF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,17 +67,18 @@
 				1222FDA425B72458004CCB3A /* LaunchScreen.storyboard */,
 				1222FDA725B72458004CCB3A /* Info.plist */,
 				1222FD9C25B72458004CCB3A /* Ciare_SwiftUI.xcdatamodeld */,
-				1222FDA125B72458004CCB3A /* Preview Content */,
+				1222FDA125B72458004CCB3A /* segmentedViews */,
+				12C8976625B732BB0018E7FF /* CustomTextField.swift */,
 			);
 			path = "Ciare-SwiftUI";
 			sourceTree = "<group>";
 		};
-		1222FDA125B72458004CCB3A /* Preview Content */ = {
+		1222FDA125B72458004CCB3A /* segmentedViews */ = {
 			isa = PBXGroup;
 			children = (
 				1222FDA225B72458004CCB3A /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
+			path = segmentedViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +155,7 @@
 				1222FD9725B72458004CCB3A /* AppDelegate.swift in Sources */,
 				1222FD9925B72458004CCB3A /* SceneDelegate.swift in Sources */,
 				1222FD9B25B72458004CCB3A /* ContentView.swift in Sources */,
+				12C8976725B732BB0018E7FF /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
