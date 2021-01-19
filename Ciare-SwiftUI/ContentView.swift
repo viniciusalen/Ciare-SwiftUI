@@ -17,28 +17,22 @@ struct ContentView: View {
         
         NavigationView{
             VStack(alignment: .leading) {
-                Text("Company")
-                    .font(.headline)
-                    .padding(.top)
-                    .padding(.horizontal)
+                CustomTitleText(name: "Company")
                 CustomTextField(placeholder: "Brand name")
-                
-                Text("Business Type")
-                    .font(.headline)
-                    .padding(.all)
+                CustomTitleText(name: "Business Type")
     
                 Picker("Business Type", selection: $rawValue) {
                     Text("Physical").tag(0)
                     Text("Digital").tag(1)
                     Text("Both").tag(2)
-                    
-                }.pickerStyle(SegmentedPickerStyle())
+                }.pickerStyle(SegmentedPickerStyle()).padding(.horizontal)
                 
                 CustomTextField(placeholder: "Business area")
                 
                 
                 if rawValue == 0 || rawValue == 2{
                     CustomTextField(placeholder: "Location")
+                    Plataforms()
                 }
 
     

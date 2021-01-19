@@ -14,8 +14,11 @@ struct CustomButton: View {
         Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
             Text(name)
                 .padding(.all)
+                .frame(width: 120, height: 50, alignment: .center)
                 .foregroundColor(Color("ColorTextButton"))
                 .background(Color("colorButton"))
+                .cornerRadius(10)
+                
         }
     }
 }

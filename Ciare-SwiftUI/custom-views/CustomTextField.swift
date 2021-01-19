@@ -14,7 +14,8 @@ struct CustomTextField: View {
     let placeholder: String
     
     var body: some View {
-        TextField(placeholder, text: $content).textFieldStyle(RoundedBorderTextFieldStyle())
+        TextField(placeholder, text: $content)
+            .textFieldStyle(RoundedBorderTextFieldStyle())
             .padding(.horizontal)
     }
 }
