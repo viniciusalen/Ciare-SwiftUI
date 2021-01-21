@@ -28,12 +28,14 @@ struct ContentView: View {
                     Text("Ambos").tag(2)
                 }.pickerStyle(SegmentedPickerStyle()).padding(.bottom)
                 
-                CustomTextField(placeholder: "Area de atuação")
+                CustomTextField(placeholder: "Area de atuação").padding(.bottom)
                 
-                if rawValue == 0 || rawValue == 2{
+                if rawValue == 0{
                     CustomTextField(placeholder: "Localização")
-                    //Plataforms()
                 } else if rawValue == 1{
+                    Plataforms()
+                } else if rawValue == 2{
+                    CustomTextField(placeholder: "Localização").padding(.bottom)
                     Plataforms()
                 }
 
