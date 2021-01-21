@@ -17,28 +17,30 @@ struct ContentView: View {
         
         NavigationView{
             VStack(alignment: .leading) {
-                CustomTitleText(name: "Company")
-                CustomTextField(placeholder: "Brand name")
-                CustomTitleText(name: "Business Type")
+                CustomTitleText(name: "Empreendimento")
+                CustomTextField(placeholder: "Nome da sua marca")
+                    .padding(.bottom)
+                CustomTitleText(name: "Tipo de negócio")
     
-                Picker("Business Type", selection: $rawValue) {
-                    Text("Physical").tag(0)
+                Picker("Tipo de negócio", selection: $rawValue) {
+                    Text("Físico").tag(0)
                     Text("Digital").tag(1)
-                    Text("Both").tag(2)
-                }.pickerStyle(SegmentedPickerStyle()).padding(.horizontal)
+                    Text("Ambos").tag(2)
+                }.pickerStyle(SegmentedPickerStyle()).padding(.bottom)
                 
-                CustomTextField(placeholder: "Business area")
-                
+                CustomTextField(placeholder: "Area de atuação")
                 
                 if rawValue == 0 || rawValue == 2{
-                    CustomTextField(placeholder: "Location")
+                    CustomTextField(placeholder: "Localização")
+                    //Plataforms()
+                } else if rawValue == 1{
                     Plataforms()
                 }
 
     
                 Spacer()
-            }.padding(.horizontal)
-            .navigationBarTitle("Register")
+            }.padding()
+            .navigationBarTitle("Cadastre-se")
         }
         
     }

@@ -11,7 +11,8 @@ struct Plataforms: View {
     var body: some View {
         VStack{
             HStack {
-                Text("Platforms")
+                Text("Plataformas")
+                    .font(.headline)
                 Spacer()
             }
             HStack{
@@ -25,7 +26,7 @@ struct Plataforms: View {
                 CustomButton(name: "Instagram")
             }
             
-        }.padding(.all)
+        }
     }
 }
 

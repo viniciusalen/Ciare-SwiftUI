@@ -16,9 +16,16 @@ struct CustomTextField: View {
     var body: some View {
         TextField(placeholder, text: $content)
             .textFieldStyle(RoundedBorderTextFieldStyle())
-            .padding(.horizontal)
+    
+
     }
 }
+
+
+
+
+
+
 
 struct CustomTextField_Previews: PreviewProvider {
     static var previews: some View {

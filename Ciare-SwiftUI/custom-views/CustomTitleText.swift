@@ -14,8 +14,6 @@ struct CustomTitleText: View {
     var body: some View {
         Text(name)
             .font(.headline)
-            .padding(.top)
-            .padding(.horizontal)
     }
 }
 
