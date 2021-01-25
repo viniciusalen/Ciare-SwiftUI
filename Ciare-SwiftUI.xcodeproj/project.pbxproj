@@ -77,9 +77,9 @@
 				35FD458925BEEE5900A01AAD /* Scenes */,
 				1222FD9625B72458004CCB3A /* AppDelegate.swift */,
 				1222FD9825B72458004CCB3A /* SceneDelegate.swift */,
+				1222FDA725B72458004CCB3A /* Info.plist */,
 				1222FD9F25B72458004CCB3A /* Assets.xcassets */,
 				1222FDA425B72458004CCB3A /* LaunchScreen.storyboard */,
-				1222FDA725B72458004CCB3A /* Info.plist */,
 				1222FD9C25B72458004CCB3A /* Ciare_SwiftUI.xcdatamodeld */,
 				1222FDA125B72458004CCB3A /* custom-views */,
 			);
@@ -353,7 +353,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.viniciusalencar.Ciare-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -375,7 +375,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.viniciusalencar.Ciare-SwiftUI";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
