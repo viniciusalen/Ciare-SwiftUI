@@ -17,6 +17,9 @@
 		1285A19725B73874006D65E7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1285A19625B73874006D65E7 /* CustomButton.swift */; };
 		1285A19B25B73E39006D65E7 /* CustomTitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1285A19A25B73E39006D65E7 /* CustomTitleText.swift */; };
 		12C8976725B732BB0018E7FF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C8976625B732BB0018E7FF /* CustomTextField.swift */; };
+		12DF902825BF121E00760CDF /* UsersInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF902725BF121E00760CDF /* UsersInfo.swift */; };
+		12DF902C25BF124000760CDF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF902B25BF124000760CDF /* User.swift */; };
+		12DF902F25BF124B00760CDF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF902E25BF124B00760CDF /* Post.swift */; };
 		352E6CFD25BF0725001E4D29 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352E6CFC25BF0725001E4D29 /* CloudKit.framework */; };
 		35FD458E25BEF19100A01AAD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FD458D25BEF19100A01AAD /* SignUpViewModel.swift */; };
 		35FD459125BEF23D00A01AAD /* SignUpViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FD459025BEF23D00A01AAD /* SignUpViewState.swift */; };
@@ -35,6 +38,9 @@
 		1285A19625B73874006D65E7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		1285A19A25B73E39006D65E7 /* CustomTitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTitleText.swift; sourceTree = "<group>"; };
 		12C8976625B732BB0018E7FF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		12DF902725BF121E00760CDF /* UsersInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInfo.swift; sourceTree = "<group>"; };
+		12DF902B25BF124000760CDF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		12DF902E25BF124B00760CDF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		352E6CF825BF0715001E4D29 /* Ciare-SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ciare-SwiftUI.entitlements"; sourceTree = "<group>"; };
 		352E6CFC25BF0725001E4D29 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		35FD458D25BEF19100A01AAD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
@@ -73,6 +79,7 @@
 		1222FD9525B72458004CCB3A /* Ciare-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				12DF902525BF116800760CDF /* Model */,
 				352E6CF825BF0715001E4D29 /* Ciare-SwiftUI.entitlements */,
 				35FD458925BEEE5900A01AAD /* Scenes */,
 				1222FD9625B72458004CCB3A /* AppDelegate.swift */,
@@ -95,6 +102,16 @@
 				1285A19A25B73E39006D65E7 /* CustomTitleText.swift */,
 			);
 			path = "custom-views";
+			sourceTree = "<group>";
+		};
+		12DF902525BF116800760CDF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				12DF902725BF121E00760CDF /* UsersInfo.swift */,
+				12DF902B25BF124000760CDF /* User.swift */,
+				12DF902E25BF124B00760CDF /* Post.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		352E6CFB25BF0725001E4D29 /* Frameworks */ = {
@@ -196,12 +213,15 @@
 				1222FD9E25B72458004CCB3A /* Ciare_SwiftUI.xcdatamodeld in Sources */,
 				1285A19B25B73E39006D65E7 /* CustomTitleText.swift in Sources */,
 				1222FD9725B72458004CCB3A /* AppDelegate.swift in Sources */,
+				12DF902F25BF124B00760CDF /* Post.swift in Sources */,
 				35FD459125BEF23D00A01AAD /* SignUpViewState.swift in Sources */,
 				35FD458E25BEF19100A01AAD /* SignUpViewModel.swift in Sources */,
 				1222FD9925B72458004CCB3A /* SceneDelegate.swift in Sources */,
 				1285A19725B73874006D65E7 /* CustomButton.swift in Sources */,
+				12DF902C25BF124000760CDF /* User.swift in Sources */,
 				1222FD9B25B72458004CCB3A /* SignUpView.swift in Sources */,
 				12C8976725B732BB0018E7FF /* CustomTextField.swift in Sources */,
+				12DF902825BF121E00760CDF /* UsersInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

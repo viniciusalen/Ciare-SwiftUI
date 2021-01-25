@@ -38,6 +38,11 @@ struct SignUpView: View {
             }
             
             Spacer()
+            
+//            NavigationLink(destination:), label: {
+//                Text("Finalizar")
+//            }
+            
         }.padding()
         .navigationBarTitle("Cadastre-se")
     }
