@@ -10,4 +10,5 @@ import Foundation
 struct SignUpViewState: Equatable {
     var brandName: String = ""
     var rawValue: Int = 0
+    var businessArea: String = ""
 }

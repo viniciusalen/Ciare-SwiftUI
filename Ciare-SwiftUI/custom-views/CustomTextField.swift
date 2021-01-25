@@ -9,26 +9,19 @@ import SwiftUI
 
 struct CustomTextField: View {
     
-    @State var content = ""
+    @Binding var content: String
     
     let placeholder: String
     
     var body: some View {
         TextField(placeholder, text: $content)
             .textFieldStyle(RoundedBorderTextFieldStyle())
-    
-
     }
 }
 
-
-
-
-
-
-
 struct CustomTextField_Previews: PreviewProvider {
+    
     static var previews: some View {
-        CustomTextField(placeholder: "name").previewLayout(.sizeThatFits)
+        CustomTextField(content: .constant("Preview Text"), placeholder: "name").previewLayout(.sizeThatFits)
     }
 }

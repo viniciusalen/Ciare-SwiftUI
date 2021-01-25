@@ -14,7 +14,7 @@ struct SignUpView: View {
     var body: some View {
         VStack(alignment: .leading) {
             CustomTitleText(name: "Empreendimento")
-            CustomTextField(placeholder: "Nome da sua marca")
+            CustomTextField(content: model.bindings.businessArea, placeholder: "Nome da sua marca")
                 .padding(.bottom)
             CustomTitleText(name: "Tipo de negócio")
             
@@ -24,15 +24,15 @@ struct SignUpView: View {
                 Text("Ambos").tag(2)
             }.pickerStyle(SegmentedPickerStyle()).padding(.bottom)
             
-            CustomTextField(placeholder: "Area de atuação").padding(.bottom)
+            CustomTextField(content: model.bindings.businessArea, placeholder: "Area de atuação").padding(.bottom)
             
             Group {
                 if model.state.rawValue == 0{
-                    CustomTextField(placeholder: "Localização")
+                    CustomTextField(content: model.bindings.businessArea ,placeholder: "Localização")
                 } else if model.state.rawValue == 1{
                     Plataforms()
                 } else if model.state.rawValue == 2{
-                    CustomTextField(placeholder: "Localização").padding(.bottom)
+                    CustomTextField(content: model.bindings.businessArea ,placeholder: "Localização").padding(.bottom)
                     Plataforms()
                 }
             }
