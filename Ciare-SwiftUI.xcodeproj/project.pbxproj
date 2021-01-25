@@ -17,6 +17,7 @@
 		1285A19725B73874006D65E7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1285A19625B73874006D65E7 /* CustomButton.swift */; };
 		1285A19B25B73E39006D65E7 /* CustomTitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1285A19A25B73E39006D65E7 /* CustomTitleText.swift */; };
 		12C8976725B732BB0018E7FF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C8976625B732BB0018E7FF /* CustomTextField.swift */; };
+		352E6CFD25BF0725001E4D29 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352E6CFC25BF0725001E4D29 /* CloudKit.framework */; };
 		35FD458E25BEF19100A01AAD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FD458D25BEF19100A01AAD /* SignUpViewModel.swift */; };
 		35FD459125BEF23D00A01AAD /* SignUpViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FD459025BEF23D00A01AAD /* SignUpViewState.swift */; };
 /* End PBXBuildFile section */
@@ -34,6 +35,8 @@
 		1285A19625B73874006D65E7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		1285A19A25B73E39006D65E7 /* CustomTitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTitleText.swift; sourceTree = "<group>"; };
 		12C8976625B732BB0018E7FF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		352E6CF825BF0715001E4D29 /* Ciare-SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ciare-SwiftUI.entitlements"; sourceTree = "<group>"; };
+		352E6CFC25BF0725001E4D29 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		35FD458D25BEF19100A01AAD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		35FD459025BEF23D00A01AAD /* SignUpViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -43,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352E6CFD25BF0725001E4D29 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +58,7 @@
 			children = (
 				1222FD9525B72458004CCB3A /* Ciare-SwiftUI */,
 				1222FD9425B72458004CCB3A /* Products */,
+				352E6CFB25BF0725001E4D29 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,6 +73,7 @@
 		1222FD9525B72458004CCB3A /* Ciare-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				352E6CF825BF0715001E4D29 /* Ciare-SwiftUI.entitlements */,
 				35FD458925BEEE5900A01AAD /* Scenes */,
 				1222FD9625B72458004CCB3A /* AppDelegate.swift */,
 				1222FD9825B72458004CCB3A /* SceneDelegate.swift */,
@@ -89,6 +95,14 @@
 				1285A19A25B73E39006D65E7 /* CustomTitleText.swift */,
 			);
 			path = "custom-views";
+			sourceTree = "<group>";
+		};
+		352E6CFB25BF0725001E4D29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				352E6CFC25BF0725001E4D29 /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		35FD458925BEEE5900A01AAD /* Scenes */ = {
@@ -326,9 +340,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Ciare-SwiftUI/Ciare-SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Ciare-SwiftUI/\"";
-				DEVELOPMENT_TEAM = ALF79554Y6;
+				DEVELOPMENT_TEAM = SCF6DTLWM7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Ciare-SwiftUI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -347,9 +362,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Ciare-SwiftUI/Ciare-SwiftUI.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Ciare-SwiftUI/\"";
-				DEVELOPMENT_TEAM = ALF79554Y6;
+				DEVELOPMENT_TEAM = SCF6DTLWM7;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Ciare-SwiftUI/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
