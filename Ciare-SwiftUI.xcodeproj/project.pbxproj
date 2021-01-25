@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		1222FD9725B72458004CCB3A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1222FD9625B72458004CCB3A /* AppDelegate.swift */; };
 		1222FD9925B72458004CCB3A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1222FD9825B72458004CCB3A /* SceneDelegate.swift */; };
-		1222FD9B25B72458004CCB3A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1222FD9A25B72458004CCB3A /* ContentView.swift */; };
+		1222FD9B25B72458004CCB3A /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1222FD9A25B72458004CCB3A /* SignUpView.swift */; };
 		1222FD9E25B72458004CCB3A /* Ciare_SwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1222FD9C25B72458004CCB3A /* Ciare_SwiftUI.xcdatamodeld */; };
 		1222FDA025B72458004CCB3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1222FD9F25B72458004CCB3A /* Assets.xcassets */; };
 		1222FDA625B72458004CCB3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1222FDA425B72458004CCB3A /* LaunchScreen.storyboard */; };
@@ -17,13 +17,15 @@
 		1285A19725B73874006D65E7 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1285A19625B73874006D65E7 /* CustomButton.swift */; };
 		1285A19B25B73E39006D65E7 /* CustomTitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1285A19A25B73E39006D65E7 /* CustomTitleText.swift */; };
 		12C8976725B732BB0018E7FF /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C8976625B732BB0018E7FF /* CustomTextField.swift */; };
+		35FD458E25BEF19100A01AAD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FD458D25BEF19100A01AAD /* SignUpViewModel.swift */; };
+		35FD459125BEF23D00A01AAD /* SignUpViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FD459025BEF23D00A01AAD /* SignUpViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1222FD9325B72458004CCB3A /* Ciare-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ciare-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1222FD9625B72458004CCB3A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1222FD9825B72458004CCB3A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1222FD9A25B72458004CCB3A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1222FD9A25B72458004CCB3A /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		1222FD9D25B72458004CCB3A /* Ciare_SwiftUI.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ciare_SwiftUI.xcdatamodel; sourceTree = "<group>"; };
 		1222FD9F25B72458004CCB3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1222FDA525B72458004CCB3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		1285A19625B73874006D65E7 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		1285A19A25B73E39006D65E7 /* CustomTitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTitleText.swift; sourceTree = "<group>"; };
 		12C8976625B732BB0018E7FF /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		35FD458D25BEF19100A01AAD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
+		35FD459025BEF23D00A01AAD /* SignUpViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,9 +68,9 @@
 		1222FD9525B72458004CCB3A /* Ciare-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				35FD458925BEEE5900A01AAD /* Scenes */,
 				1222FD9625B72458004CCB3A /* AppDelegate.swift */,
 				1222FD9825B72458004CCB3A /* SceneDelegate.swift */,
-				1222FD9A25B72458004CCB3A /* ContentView.swift */,
 				1222FD9F25B72458004CCB3A /* Assets.xcassets */,
 				1222FDA425B72458004CCB3A /* LaunchScreen.storyboard */,
 				1222FDA725B72458004CCB3A /* Info.plist */,
@@ -85,6 +89,24 @@
 				1285A19A25B73E39006D65E7 /* CustomTitleText.swift */,
 			);
 			path = "custom-views";
+			sourceTree = "<group>";
+		};
+		35FD458925BEEE5900A01AAD /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				35FD458A25BEEE6400A01AAD /* SignUp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		35FD458A25BEEE6400A01AAD /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				1222FD9A25B72458004CCB3A /* SignUpView.swift */,
+				35FD458D25BEF19100A01AAD /* SignUpViewModel.swift */,
+				35FD459025BEF23D00A01AAD /* SignUpViewState.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,9 +182,11 @@
 				1222FD9E25B72458004CCB3A /* Ciare_SwiftUI.xcdatamodeld in Sources */,
 				1285A19B25B73E39006D65E7 /* CustomTitleText.swift in Sources */,
 				1222FD9725B72458004CCB3A /* AppDelegate.swift in Sources */,
+				35FD459125BEF23D00A01AAD /* SignUpViewState.swift in Sources */,
+				35FD458E25BEF19100A01AAD /* SignUpViewModel.swift in Sources */,
 				1222FD9925B72458004CCB3A /* SceneDelegate.swift in Sources */,
 				1285A19725B73874006D65E7 /* CustomButton.swift in Sources */,
-				1222FD9B25B72458004CCB3A /* ContentView.swift in Sources */,
+				1222FD9B25B72458004CCB3A /* SignUpView.swift in Sources */,
 				12C8976725B732BB0018E7FF /* CustomTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
