@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="true" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="UserInformation" representedClassName="UserInformation" syncable="YES" codeGenerationType="class">
+        <attribute name="availableToPartnerships" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="expertiseAreas" optional="YES" attributeType="Transformable"/>
+        <attribute name="followers" optional="YES" attributeType="Transformable" valueTransformerName=""/>
+        <attribute name="following" optional="YES" attributeType="Transformable"/>
+        <attribute name="location" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="partners" optional="YES" attributeType="Transformable"/>
+        <attribute name="picture" optional="YES" attributeType="Binary"/>
+        <attribute name="socialNetworks" optional="YES" attributeType="Transformable"/>
+        <attribute name="typeBusiness" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="UserInformation" positionX="-63" positionY="-18" width="128" height="179"/>
+    </elements>
 </model>
