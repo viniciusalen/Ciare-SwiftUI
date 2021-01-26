@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+ 
 struct LoginView: View {
     var body: some View {
         ZStack {
@@ -18,7 +18,6 @@ struct LoginView: View {
                 Image("logo")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .padding(.all)
                 Text("Ciare")
                     .font(.largeTitle)
                     .padding(.bottom)
