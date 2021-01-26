@@ -24,7 +24,7 @@ struct LoginView: View {
                     .foregroundColor(Color(#colorLiteral(red: 0.1212012246, green: 0.2852312922, blue: 0.74481529, alpha: 1)))
                 Spacer()
                 SignInWithApple()
-                    .frame(width: 280, height: 60)
+                    .frame(width: .infinity, height: 60)
                     .padding()
                     
             }
