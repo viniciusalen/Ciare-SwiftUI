@@ -83,21 +83,18 @@
 		1222FD9525B72458004CCB3A /* Ciare-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				12DF902525BF116800760CDF /* Model */,
+				35FE1DD725C047DF001A1E6C /* UI */,
+				35FE1DDA25C0495E001A1E6C /* Domain */,
+				35FE1DD925C048B2001A1E6C /* System */,
 				352E6CF825BF0715001E4D29 /* Ciare-SwiftUI.entitlements */,
-				35FD458925BEEE5900A01AAD /* Scenes */,
-				1222FD9625B72458004CCB3A /* AppDelegate.swift */,
-				1222FD9825B72458004CCB3A /* SceneDelegate.swift */,
 				1222FDA725B72458004CCB3A /* Info.plist */,
 				1222FD9F25B72458004CCB3A /* Assets.xcassets */,
-				1222FDA425B72458004CCB3A /* LaunchScreen.storyboard */,
 				1222FD9C25B72458004CCB3A /* Ciare_SwiftUI.xcdatamodeld */,
-				1222FDA125B72458004CCB3A /* custom-views */,
 			);
 			path = "Ciare-SwiftUI";
 			sourceTree = "<group>";
 		};
-		1222FDA125B72458004CCB3A /* custom-views */ = {
+		1222FDA125B72458004CCB3A /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				12748F3C25B736AF0091148D /* Plataforms.swift */,
@@ -106,7 +103,7 @@
 				1285A19A25B73E39006D65E7 /* CustomTitleText.swift */,
 				12B00FBC25C039B600CF1437 /* SignInWithApple.swift */,
 			);
-			path = "custom-views";
+			path = Components;
 			sourceTree = "<group>";
 		};
 		1284112325C0360100CAD7FB /* Login */ = {
@@ -152,6 +149,33 @@
 				35FD459025BEF23D00A01AAD /* SignUpViewState.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		35FE1DD725C047DF001A1E6C /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1222FDA425B72458004CCB3A /* LaunchScreen.storyboard */,
+				1222FDA125B72458004CCB3A /* Components */,
+				35FD458925BEEE5900A01AAD /* Scenes */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		35FE1DD925C048B2001A1E6C /* System */ = {
+			isa = PBXGroup;
+			children = (
+				1222FD9625B72458004CCB3A /* AppDelegate.swift */,
+				1222FD9825B72458004CCB3A /* SceneDelegate.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		35FE1DDA25C0495E001A1E6C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				12DF902525BF116800760CDF /* Model */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
