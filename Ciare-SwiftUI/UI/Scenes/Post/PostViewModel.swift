@@ -23,6 +23,11 @@ final class PostViewModel: ObservableObject {
         state.isShowCamera = true
     }
     
+    func clearButton() {
+        state.postDescription = ""
+        state.image = UIImage()
+    }
+    
     var bindings: (
         postDescription: Binding<String>,
         isShowPhotoLibrary: Binding<Bool>,
