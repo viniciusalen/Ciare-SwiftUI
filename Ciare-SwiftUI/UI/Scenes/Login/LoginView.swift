@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AuthenticationServices
  
 struct LoginView: View {
     var body: some View {
@@ -22,11 +23,22 @@ struct LoginView: View {
                     .font(.largeTitle)
                     .padding(.bottom)
                     .foregroundColor(Color(#colorLiteral(red: 0.1212012246, green: 0.2852312922, blue: 0.74481529, alpha: 1)))
+                
                 Spacer()
-                SignInWithApple()
-                    .frame(width: .infinity, height: 60)
-                    .padding()
+                
+                SignInWithAppleButton(.signIn) { (request) in
                     
+                } onCompletion: { (result) in
+                    switch result {
+                    case .success(let authorization):
+                        
+                        break
+                    case .failure(let error):
+                        break
+                    }
+                }
+                .frame(minWidth: 280, maxWidth: .infinity ,minHeight: 60, maxHeight: 60, alignment: .center)
+                .padding()
             }
         }
     }
