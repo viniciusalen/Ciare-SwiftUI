@@ -9,6 +9,9 @@ import SwiftUI
 import AuthenticationServices
  
 struct LoginView: View {
+    @EnvironmentObject var userSessionService: UserSessionService
+    @ObservedObject var model: LoginViewModel
+        
     var body: some View {
         ZStack {
             Image("background")
@@ -26,14 +29,18 @@ struct LoginView: View {
                 
                 Spacer()
                 
-                SignInWithAppleButton(.signIn) { (request) in
+                SignInWithAppleButton(.signIn) {
+                    request in
                     
+                    request.requestedScopes = [.email, .fullName]
                 } onCompletion: { (result) in
                     switch result {
                     case .success(let authorization):
-                        
+                        model.userSessionService = userSessionService
+                        model.signInWithAppleSuccess(authorization)
                         break
                     case .failure(let error):
+                        model.signInWithAppleError(error)
                         break
                     }
                 }
@@ -46,6 +53,6 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView()
+        LoginView( model: .init(userSessionService: .init()))
     }
 }
