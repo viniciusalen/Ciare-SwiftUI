@@ -31,8 +31,8 @@
 		354FB82625C1997300969083 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354FB82525C1997300969083 /* LoginViewModel.swift */; };
 		354FB82C25C1A16800969083 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354FB82B25C1A16800969083 /* UserSession.swift */; };
 		354FB83425C1A24D00969083 /* UserSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354FB83325C1A24D00969083 /* UserSessionService.swift */; };
-		354FB83925C1A3EF00969083 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354FB83825C1A3EF00969083 /* MasterView.swift */; };
 		354FB83D25C1B05400969083 /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354FB83C25C1B05400969083 /* MasterViewModel.swift */; };
+		354FB84125C1C01000969083 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354FB83825C1A3EF00969083 /* MasterView.swift */; };
 		35FD458E25BEF19100A01AAD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FD458D25BEF19100A01AAD /* SignUpViewModel.swift */; };
 		35FD459125BEF23D00A01AAD /* SignUpViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FD459025BEF23D00A01AAD /* SignUpViewState.swift */; };
 /* End PBXBuildFile section */
@@ -180,8 +180,9 @@
 				354FB83825C1A3EF00969083 /* MasterView.swift */,
 				354FB83C25C1B05400969083 /* MasterViewModel.swift */,
 			);
-			path = MasterView;
-			sourceTree = "<group>";
+			name = MasterView;
+			path = "Ciare-SwiftUI/UI/Scenes/MasterView";
+			sourceTree = SOURCE_ROOT;
 		};
 		35FD458925BEEE5900A01AAD /* Scenes */ = {
 			isa = PBXGroup;
@@ -324,6 +325,7 @@
 				1236BDE725C1999300706FAE /* ImagePicker.swift in Sources */,
 				12C8976725B732BB0018E7FF /* CustomTextField.swift in Sources */,
 				354FB82625C1997300969083 /* LoginViewModel.swift in Sources */,
+				354FB84125C1C01000969083 /* MasterView.swift in Sources */,
 				12DF902825BF121E00760CDF /* UsersInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
