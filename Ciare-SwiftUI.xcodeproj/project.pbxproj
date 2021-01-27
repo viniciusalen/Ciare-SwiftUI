@@ -13,6 +13,8 @@
 		1222FD9E25B72458004CCB3A /* Ciare_SwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1222FD9C25B72458004CCB3A /* Ciare_SwiftUI.xcdatamodeld */; };
 		1222FDA025B72458004CCB3A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1222FD9F25B72458004CCB3A /* Assets.xcassets */; };
 		1222FDA625B72458004CCB3A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1222FDA425B72458004CCB3A /* LaunchScreen.storyboard */; };
+		1236BDE425C197FC00706FAE /* TestViewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1236BDE325C197FC00706FAE /* TestViewImage.swift */; };
+		1236BDE725C1999300706FAE /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1236BDE625C1999300706FAE /* ImagePicker.swift */; };
 		12748F3D25B736AF0091148D /* Plataforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12748F3C25B736AF0091148D /* Plataforms.swift */; };
 		12838AF225C058CD00825819 /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12838AF125C058CD00825819 /* CustomTextView.swift */; };
 		12838AF525C06DF900825819 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12838AF425C06DF900825819 /* PostViewModel.swift */; };
@@ -39,6 +41,8 @@
 		1222FD9F25B72458004CCB3A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1222FDA525B72458004CCB3A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1222FDA725B72458004CCB3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1236BDE325C197FC00706FAE /* TestViewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewImage.swift; sourceTree = "<group>"; };
+		1236BDE625C1999300706FAE /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		12748F3C25B736AF0091148D /* Plataforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plataforms.swift; sourceTree = "<group>"; };
 		12838AF125C058CD00825819 /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
 		12838AF425C06DF900825819 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
@@ -108,6 +112,7 @@
 				1285A19625B73874006D65E7 /* CustomButton.swift */,
 				1285A19A25B73E39006D65E7 /* CustomTitleText.swift */,
 				12838AF125C058CD00825819 /* CustomTextView.swift */,
+				1236BDE625C1999300706FAE /* ImagePicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -126,6 +131,7 @@
 				12ACEDAC25C04E4E00AAD1DB /* PostView.swift */,
 				12838AF425C06DF900825819 /* PostViewModel.swift */,
 				12838AF725C06E3500825819 /* PostViewState.swift */,
+				1236BDE325C197FC00706FAE /* TestViewImage.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -264,6 +270,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1236BDE425C197FC00706FAE /* TestViewImage.swift in Sources */,
 				12748F3D25B736AF0091148D /* Plataforms.swift in Sources */,
 				1222FD9E25B72458004CCB3A /* Ciare_SwiftUI.xcdatamodeld in Sources */,
 				1285A19B25B73E39006D65E7 /* CustomTitleText.swift in Sources */,
@@ -280,6 +287,7 @@
 				12ACEDAD25C04E4E00AAD1DB /* PostView.swift in Sources */,
 				12DF902C25BF124000760CDF /* User.swift in Sources */,
 				1222FD9B25B72458004CCB3A /* SignUpView.swift in Sources */,
+				1236BDE725C1999300706FAE /* ImagePicker.swift in Sources */,
 				12C8976725B732BB0018E7FF /* CustomTextField.swift in Sources */,
 				12DF902825BF121E00760CDF /* UsersInfo.swift in Sources */,
 			);

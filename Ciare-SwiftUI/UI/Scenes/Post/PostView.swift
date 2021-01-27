@@ -33,14 +33,42 @@ struct PostView: View {
                 RoundedRectangle(cornerRadius: 20)
                     .frame(height: 120)
                     .foregroundColor(Color(#colorLiteral(red: 0.9349476099, green: 0.9252169728, blue: 0.9252256751, alpha: 1)))
-                    .overlay(TextView(placeholderText: "Descreva seu post aqui...", text: model.postDescription).padding())
-                Image("postImage")
+                    .overlay(TextView(placeholderText: "Descreva seu post aqui...", text: model.bindings.postDescription).padding())
+                Image(uiImage: model.state.image)
                     .resizable()
+                    .scaledToFill()
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 250, maxHeight: 300)
+                    .background(Color(#colorLiteral(red: 0.9349476099, green: 0.9252169728, blue: 0.9252256751, alpha: 1)))
                     .cornerRadius(20)
-                    .aspectRatio(contentMode: .fit)
-                    .background(Color(#colorLiteral(red: 0.9323797226, green: 0.9272215962, blue: 0.9275678992, alpha: 1)))
-                                        
 
+                HStack {
+                    Spacer()
+                    Button(action: {model.showActionSheet()}) {
+                        Image(systemName: "camera.fill")
+                            .imageScale(.large)
+                        
+                    }   .padding(.top, -44)
+                        .padding(.trailing, 18)
+                    .actionSheet(isPresented: model.bindings.showingActionSheet, content: {
+                        ActionSheet(title: Text("Escolha a fonte"), buttons: [
+                                .default(Text("Galeria")) {
+                                    model.isShowPhotoLibrary()
+                                },
+                                .default(Text("Camera")) {
+                                    model.isShowCamera()
+                                },
+                                .cancel()
+                            ])
+                    })
+                }
+                .sheet(isPresented: model.bindings.isShowPhotoLibrary, content: {
+                    ImagePicker(selectedImage: model.bindings.image, sourceType:.photoLibrary)
+                        .sheet(isPresented: model.bindings.isShowCamera, content: {
+                            ImagePicker(selectedImage: model.bindings.image, sourceType: .camera)
+                    })
+                })
+
+                            
                 HStack {
                     Spacer()
                     Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
@@ -53,8 +81,9 @@ struct PostView: View {
                 }
             }
             Spacer()
-        }.padding(.horizontal)
-        
+        }
+            .padding(.horizontal)
+                    
     }
 }
 
