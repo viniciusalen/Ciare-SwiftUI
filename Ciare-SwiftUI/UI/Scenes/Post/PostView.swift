@@ -24,7 +24,7 @@ struct PostView: View {
                     Text("Artesanato").font(.footnote)
                 }
                 Spacer()
-                Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                Button(action: {model.clearButton()}) {
                     Text("Limpar")
                 }
             }.padding(.top)
