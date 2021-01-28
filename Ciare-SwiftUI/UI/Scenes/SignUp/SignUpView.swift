@@ -39,9 +39,10 @@ struct SignUpView: View {
             
             Spacer()
             
-//            NavigationLink(destination:), label: {
-//                Text("Finalizar")
-//            }
+            Button("Finalizar", action: {
+                //TO-DO: Adicionar a var "registered" no model UserSession pra manipular quando o usuário já estiver registrado
+                model.signUpUser()
+            })
             
         }.padding()
         .navigationBarTitle("Cadastre-se")

@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import CoreData
 
 final class SignUpViewModel: ObservableObject {
     @Published private(set) var state: SignUpViewState
+
+    var userInformationService: UserInformationService
     
     var bindings: (
         brandName: Binding<String>,
@@ -26,7 +29,17 @@ final class SignUpViewModel: ObservableObject {
         )
     }
     
-    init(initialState: SignUpViewState = .init()) {
+    init(initialState: SignUpViewState = .init(), userInformationService: UserInformationService = LocalUserInformationService.shared) {
         state = initialState
+        self.userInformationService = userInformationService
+    }
+    
+    func signUpUser() {
+        userInformationService.createWith(
+            name: state.brandName,
+            typeBusiness: state.businessArea,
+            expertiseAreas: state.businessArea,
+            location: state.location,
+            socialNetworks: ["Facebook", "Instagram"])
     }
 }
