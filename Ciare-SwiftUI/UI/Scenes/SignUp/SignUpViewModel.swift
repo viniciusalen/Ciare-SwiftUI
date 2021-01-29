@@ -18,14 +18,34 @@ final class SignUpViewModel: ObservableObject {
         rawValue: Binding<Int>,
         businessArea: Binding<String>,
         businessName: Binding<String>,
-        location: Binding<String>
+        location: Binding<String>,
+        socialNetworks: Binding<[String]>
     ) {
         (
-            brandName: Binding(get: { self.state.brandName }, set: { self.state.brandName = $0 } ),
-            rawValue: Binding(get: { self.state.rawValue }, set: { self.state.rawValue = $0 } ),
-            businessArea: Binding(get: { self.state.businessArea }, set: { self.state.businessArea = $0 } ),
-            businessName: Binding(get: { self.state.businessName }, set: { self.state.businessName = $0 } ),
-            location: Binding(get: { self.state.location }, set: { self.state.location = $0 } )
+            brandName: Binding(
+                get: { self.state.brandName },
+                set: { self.state.brandName = $0 }
+            ),
+            rawValue: Binding(
+                get: { self.state.rawValue },
+                set: { self.state.rawValue = $0 }
+            ),
+            businessArea: Binding(
+                get: { self.state.businessArea },
+                set: { self.state.businessArea = $0 }
+            ),
+            businessName: Binding(
+                get: { self.state.businessName },
+                set: { self.state.businessName = $0 }
+            ),
+            location: Binding(
+                get: { self.state.location },
+                set: { self.state.location = $0 }
+            ),
+            socialNetworks: Binding(
+                get: { self.state.socialNetworks },
+                set: { self.state.socialNetworks = $0 }
+            )
         )
     }
     
@@ -40,6 +60,6 @@ final class SignUpViewModel: ObservableObject {
             typeBusiness: state.businessArea,
             expertiseAreas: state.businessArea,
             location: state.location,
-            socialNetworks: ["Facebook", "Instagram"])
+            socialNetworks: state.socialNetworks)
     }
 }

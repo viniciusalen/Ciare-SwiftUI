@@ -13,4 +13,5 @@ struct SignUpViewState: Equatable {
     var businessArea: String = ""
     var businessName: String = ""
     var location: String = ""
+    var socialNetworks: [String] = []
 }

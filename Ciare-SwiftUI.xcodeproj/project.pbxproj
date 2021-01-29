@@ -30,6 +30,7 @@
 		12DF902825BF121E00760CDF /* UsersInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF902725BF121E00760CDF /* UsersInfo.swift */; };
 		12DF902C25BF124000760CDF /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF902B25BF124000760CDF /* User.swift */; };
 		12DF902F25BF124B00760CDF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12DF902E25BF124B00760CDF /* Post.swift */; };
+		350C0DDD25C42D8400AFF51C /* SignUpButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350C0DDC25C42D8400AFF51C /* SignUpButton.swift */; };
 		352E6CFD25BF0725001E4D29 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 352E6CFC25BF0725001E4D29 /* CloudKit.framework */; };
 		354FB82625C1997300969083 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354FB82525C1997300969083 /* LoginViewModel.swift */; };
 		354FB82C25C1A16800969083 /* UserSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354FB82B25C1A16800969083 /* UserSession.swift */; };
@@ -69,6 +70,7 @@
 		12DF902725BF121E00760CDF /* UsersInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersInfo.swift; sourceTree = "<group>"; };
 		12DF902B25BF124000760CDF /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		12DF902E25BF124B00760CDF /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		350C0DDC25C42D8400AFF51C /* SignUpButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpButton.swift; sourceTree = "<group>"; };
 		352E6CF825BF0715001E4D29 /* Ciare-SwiftUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Ciare-SwiftUI.entitlements"; sourceTree = "<group>"; };
 		352E6CFC25BF0725001E4D29 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		354FB82525C1997300969083 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 				12748F3C25B736AF0091148D /* Plataforms.swift */,
 				1236BDE625C1999300706FAE /* ImagePicker.swift */,
 				124F83A825C30D090087CB50 /* CustomPost.swift */,
+				350C0DDC25C42D8400AFF51C /* SignUpButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				354FB84125C1C01000969083 /* MasterView.swift in Sources */,
 				124F83AD25C30D1F0087CB50 /* FeedViewState.swift in Sources */,
 				12DF902825BF121E00760CDF /* UsersInfo.swift in Sources */,
+				350C0DDD25C42D8400AFF51C /* SignUpButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

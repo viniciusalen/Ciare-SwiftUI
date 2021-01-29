@@ -8,18 +8,22 @@
 import SwiftUI
 
 struct CustomButton: View {
-    
+    @State var isSelected: Bool = false
     let name: String
+    
     var body: some View {
-        Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+        Button(action: {
+            isSelected = !isSelected
+        }) {
             Text(name)
                 .padding(.all)
                 .frame(width: 108, height: 50, alignment: .center)
-                .foregroundColor(Color("ColorTextButton"))
-                .background(Color("colorButton"))
-                .cornerRadius(10)
+                .foregroundColor(isSelected ?
+                    Color("selectedButtonText") :
+                    Color("unselectedButtonText"))
+                .background(isSelected ? Color("orangeButton") : Color("grayButton"))
+                .cornerRadius(15)
                 .font(.subheadline)
-                
         }
     }
 }
