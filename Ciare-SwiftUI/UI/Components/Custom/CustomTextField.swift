@@ -15,7 +15,10 @@ struct CustomTextField: View {
     
     var body: some View {
         TextField(placeholder, text: $content)
-            .textFieldStyle(RoundedBorderTextFieldStyle())
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 15)
+                            .fill(Color("TextFieldBg"))
+            )
     }
 }
 
