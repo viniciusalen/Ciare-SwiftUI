@@ -34,7 +34,8 @@
 		354FB83D25C1B05400969083 /* MasterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354FB83C25C1B05400969083 /* MasterViewModel.swift */; };
 		354FB84125C1C01000969083 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354FB83825C1A3EF00969083 /* MasterView.swift */; };
 		354FB86F25C2E1E300969083 /* UserInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354FB86E25C2E1E300969083 /* UserInformationService.swift */; };
-		354FB87425C2EE2500969083 /* LocalUserInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354FB87325C2EE2500969083 /* LocalUserInformationService.swift */; };
+		354FB87425C2EE2500969083 /* CDUserInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354FB87325C2EE2500969083 /* CDUserInformationService.swift */; };
+		354FB87825C30A6600969083 /* CKUserInformationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354FB87725C30A6600969083 /* CKUserInformationService.swift */; };
 		35FD458E25BEF19100A01AAD /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FD458D25BEF19100A01AAD /* SignUpViewModel.swift */; };
 		35FD459125BEF23D00A01AAD /* SignUpViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35FD459025BEF23D00A01AAD /* SignUpViewState.swift */; };
 /* End PBXBuildFile section */
@@ -70,7 +71,8 @@
 		354FB83825C1A3EF00969083 /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
 		354FB83C25C1B05400969083 /* MasterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewModel.swift; sourceTree = "<group>"; };
 		354FB86E25C2E1E300969083 /* UserInformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationService.swift; sourceTree = "<group>"; };
-		354FB87325C2EE2500969083 /* LocalUserInformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalUserInformationService.swift; sourceTree = "<group>"; };
+		354FB87325C2EE2500969083 /* CDUserInformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDUserInformationService.swift; sourceTree = "<group>"; };
+		354FB87725C30A6600969083 /* CKUserInformationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKUserInformationService.swift; sourceTree = "<group>"; };
 		35FD458D25BEF19100A01AAD /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		35FD459025BEF23D00A01AAD /* SignUpViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,7 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				354FB86E25C2E1E300969083 /* UserInformationService.swift */,
-				354FB87325C2EE2500969083 /* LocalUserInformationService.swift */,
+				354FB87325C2EE2500969083 /* CDUserInformationService.swift */,
+				354FB87725C30A6600969083 /* CKUserInformationService.swift */,
 			);
 			path = UserInformation;
 			sourceTree = "<group>";
@@ -329,11 +332,12 @@
 				35FD459125BEF23D00A01AAD /* SignUpViewState.swift in Sources */,
 				12838AF525C06DF900825819 /* PostViewModel.swift in Sources */,
 				35FD458E25BEF19100A01AAD /* SignUpViewModel.swift in Sources */,
+				354FB87825C30A6600969083 /* CKUserInformationService.swift in Sources */,
 				1222FD9925B72458004CCB3A /* SceneDelegate.swift in Sources */,
 				1284112125C035F600CAD7FB /* LoginView.swift in Sources */,
 				354FB82C25C1A16800969083 /* UserSession.swift in Sources */,
 				12838AF225C058CD00825819 /* CustomTextView.swift in Sources */,
-				354FB87425C2EE2500969083 /* LocalUserInformationService.swift in Sources */,
+				354FB87425C2EE2500969083 /* CDUserInformationService.swift in Sources */,
 				1285A19725B73874006D65E7 /* CustomButton.swift in Sources */,
 				12ACEDAD25C04E4E00AAD1DB /* PostView.swift in Sources */,
 				12DF902C25BF124000760CDF /* User.swift in Sources */,

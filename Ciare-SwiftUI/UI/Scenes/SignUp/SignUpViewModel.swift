@@ -29,11 +29,11 @@ final class SignUpViewModel: ObservableObject {
         )
     }
     
-    init(initialState: SignUpViewState = .init(), userInformationService: UserInformationService = LocalUserInformationService.shared) {
+    init(initialState: SignUpViewState = .init(), userInformationService: UserInformationService = CDUserInformationService.shared) {
         state = initialState
         self.userInformationService = userInformationService
     }
-    
+        
     func signUpUser() {
         userInformationService.createWith(
             name: state.brandName,
