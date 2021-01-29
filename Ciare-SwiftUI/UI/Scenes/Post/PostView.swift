@@ -33,7 +33,7 @@ struct PostView: View {
                 RoundedRectangle(cornerRadius: 20)
                     .frame(height: 120)
                     .foregroundColor(Color(#colorLiteral(red: 0.9349476099, green: 0.9252169728, blue: 0.9252256751, alpha: 1)))
-                    .overlay(TextView(placeholderText: "Descreva seu post aqui...", text: model.bindings.postDescription).padding())
+                    .overlay(TextView(isSelectable: true, placeholderText: "Descreva seu post aqui...", text: model.bindings.postDescription).padding())
                 Image(uiImage: model.state.image)
                     .resizable()
                     .scaledToFill()
@@ -63,11 +63,10 @@ struct PostView: View {
                 }
                 .sheet(isPresented: model.bindings.isShowPhotoLibrary, content: {
                     ImagePicker(selectedImage: model.bindings.image, sourceType:.photoLibrary)
-                        .sheet(isPresented: model.bindings.isShowCamera, content: {
+                .sheet(isPresented: model.bindings.isShowCamera, content: {
                             ImagePicker(selectedImage: model.bindings.image, sourceType: .camera)
                     })
                 })
-
                             
                 HStack {
                     Spacer()
