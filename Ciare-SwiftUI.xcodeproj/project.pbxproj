@@ -118,12 +118,11 @@
 			isa = PBXGroup;
 			children = (
 				35FE1DD725C047DF001A1E6C /* UI */,
-				1222FD9F25B72458004CCB3A /* Assets.xcassets */,
 				35FE1DDA25C0495E001A1E6C /* Domain */,
+				353595D125C4C5B400210A22 /* Data */,
 				35FE1DD925C048B2001A1E6C /* System */,
-				352E6CF825BF0715001E4D29 /* Ciare-SwiftUI.entitlements */,
 				1222FDA725B72458004CCB3A /* Info.plist */,
-				1222FD9C25B72458004CCB3A /* Ciare_SwiftUI.xcdatamodeld */,
+				352E6CF825BF0715001E4D29 /* Ciare-SwiftUI.entitlements */,
 			);
 			path = "Ciare-SwiftUI";
 			sourceTree = "<group>";
@@ -199,6 +198,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		353595D125C4C5B400210A22 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				1222FD9C25B72458004CCB3A /* Ciare_SwiftUI.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		354FB83225C1A22F00969083 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -254,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				1222FDA425B72458004CCB3A /* LaunchScreen.storyboard */,
+				1222FD9F25B72458004CCB3A /* Assets.xcassets */,
 				1222FDA125B72458004CCB3A /* Components */,
 				35FD458925BEEE5900A01AAD /* Scenes */,
 			);

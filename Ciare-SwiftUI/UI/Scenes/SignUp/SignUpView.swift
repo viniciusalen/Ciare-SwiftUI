@@ -39,15 +39,14 @@ struct SignUpView: View {
                         }
                     }
                 }
-                                
-                SignUpButton(title: "Finalizar", action: {
-                    //TO-DO: Adicionar a var "registered" no model UserSession pra manipular quando o usuário já estiver registrado
-                    model.signUpUser()
-                })
             }
+            SignUpButton(title: "Finalizar", action: {
+                //TO-DO: Adicionar a var "registered" no model UserSession pra manipular quando o usuário já estiver registrado
+                model.signUpUser()
+            })
         }.padding()
         .navigationBarTitle("Cadastre-se")
-
+        
     }
 }
 
