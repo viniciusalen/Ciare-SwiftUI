@@ -8,6 +8,15 @@
 import SwiftUI
 
 struct Plataforms: View {
+    @State var selectedNetworks: [String] = []
+    
+    private let availableNetworks: [String] = ["Linkedin", "Facebook", "WhatsApp", "TikTok", "Twitter", "Instagram"]
+    private let columns = [
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible())
+    ]
+    
     var body: some View {
         VStack{
             HStack {
@@ -15,17 +24,19 @@ struct Plataforms: View {
                     .font(.headline)
                 Spacer()
             }
-            HStack{
-                CustomButton(name: "Linkedin")
-                CustomButton(name: "Facebook")
-                CustomButton(name: "WhatsApp")
-            }
-            HStack{
-                CustomButton(name: "Tiktok")
-                CustomButton(name: "Twitter")
-                CustomButton(name: "Instagram")
-            }
-            
+            LazyVGrid(columns: columns, content: {
+                ForEach(availableNetworks, id: \.self) { network in
+                    CustomButton(name: network){
+                        let elementIndex = selectedNetworks.firstIndex(of: network)
+                        
+                        if elementIndex == nil {
+                            selectedNetworks.append(network)
+                        } else {
+                            selectedNetworks.remove(at: elementIndex!)
+                        }
+                    }
+                }
+            })
         }
     }
 }

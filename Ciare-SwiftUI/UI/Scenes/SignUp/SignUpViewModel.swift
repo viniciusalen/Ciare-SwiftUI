@@ -10,8 +10,7 @@ import CoreData
 
 final class SignUpViewModel: ObservableObject {
     @Published private(set) var state: SignUpViewState
-
-    var userInformationService: UserInformationService
+    private var businessType = ""
     
     var bindings: (
         brandName: Binding<String>,
@@ -49,17 +48,20 @@ final class SignUpViewModel: ObservableObject {
         )
     }
     
-    init(initialState: SignUpViewState = .init(), userInformationService: UserInformationService = CDUserInformationService.shared) {
+    init(initialState: SignUpViewState = .init()) {
         state = initialState
-        self.userInformationService = userInformationService
     }
-        
-    func signUpUser() {
-        userInformationService.createWith(
-            name: state.brandName,
-            typeBusiness: state.businessArea,
-            expertiseAreas: state.businessArea,
-            location: state.location,
-            socialNetworks: state.socialNetworks)
+    
+    func createInformations() {
+        switch state.rawValue {
+        case 0:
+            self.businessType = "Physical"
+        case 1:
+            self.businessType = "Digital"
+        case 2:
+            self.businessType = "Both"
+        default:
+            break
+        }
     }
 }

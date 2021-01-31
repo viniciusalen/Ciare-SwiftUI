@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct SignUpView: View {
-    
     @ObservedObject var model: SignUpViewModel
+    @Environment(\.managedObjectContext) var context
     
     var body: some View {
         VStack() {
@@ -32,17 +32,17 @@ struct SignUpView: View {
                         if model.state.rawValue == 0{
                             CustomTextField(content: model.bindings.location ,placeholder: "Localização")
                         } else if model.state.rawValue == 1{
-                            Plataforms()
+                            Plataforms(selectedNetworks: model.state.socialNetworks)
                         } else if model.state.rawValue == 2{
                             CustomTextField(content: model.bindings.location ,placeholder: "Localização").padding(.bottom)
-                            Plataforms()
+                            Plataforms(selectedNetworks: model.state.socialNetworks)
                         }
                     }
                 }
             }
             SignUpButton(title: "Finalizar", action: {
                 //TO-DO: Adicionar a var "registered" no model UserSession pra manipular quando o usuário já estiver registrado
-                model.signUpUser()
+                model.createInformations()
             })
         }.padding()
         .navigationBarTitle("Cadastre-se")

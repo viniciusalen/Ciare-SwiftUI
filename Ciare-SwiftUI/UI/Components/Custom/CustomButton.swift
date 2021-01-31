@@ -10,9 +10,11 @@ import SwiftUI
 struct CustomButton: View {
     @State var isSelected: Bool = false
     let name: String
+    let action: () -> Void
     
     var body: some View {
         Button(action: {
+            action()
             isSelected = !isSelected
         }) {
             Text(name)
@@ -30,6 +32,6 @@ struct CustomButton: View {
 
 struct CustomButton_Previews: PreviewProvider {
     static var previews: some View {
-        CustomButton(name: "Facebook").previewLayout(.sizeThatFits)
+        CustomButton(name: "Facebook", action: { }).previewLayout(.sizeThatFits)
     }
 }
