@@ -42,7 +42,7 @@ struct SignUpView: View {
             }
             SignUpButton(title: "Finalizar", action: {
                 //TO-DO: Adicionar a var "registered" no model UserSession pra manipular quando o usuário já estiver registrado
-                model.createInformations()
+                model.createInformations(context: context)
             })
         }.padding()
         .navigationBarTitle("Cadastre-se")

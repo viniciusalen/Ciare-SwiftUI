@@ -10,10 +10,8 @@ import CoreData
 
 final class SignUpViewModel: ObservableObject {
     @Published private(set) var state: SignUpViewState
-    private var businessType = ""
     
     var bindings: (
-        brandName: Binding<String>,
         businessArea: Binding<String>,
         businessName: Binding<String>,
         businessType: Binding<String>,
@@ -21,10 +19,6 @@ final class SignUpViewModel: ObservableObject {
         socialNetworks: Binding<[String]>
     ) {
         (
-            brandName: Binding(
-                get: { self.state.brandName },
-                set: { self.state.brandName = $0 }
-            ),
             businessArea: Binding(
                 get: { self.state.businessArea },
                 set: { self.state.businessArea = $0 }
@@ -52,6 +46,24 @@ final class SignUpViewModel: ObservableObject {
         state = initialState
     }
     
-    func createInformations() {
+    func createInformations(context: NSManagedObjectContext) {
+        let newUserInfo = NSEntityDescription.insertNewObject(forEntityName: "UserInformation", into: context) as! UserInformation
+        
+        newUserInfo.name = state.businessName
+        newUserInfo.expertiseAreas = state.businessArea
+        newUserInfo.typeBusiness = state.businessType
+        newUserInfo.location = state.location
+        newUserInfo.socialNetworks = state.socialNetworks
+        newUserInfo.followers = []
+        newUserInfo.following = []
+        newUserInfo.partners = []
+        
+        do {
+            try context.save()
+            debugPrint("=============SALVO=============: \n\(newUserInfo)\n==========================")
+        } catch let createError {
+            print("Failed to create: \(createError)")
+        }
+
     }
 }
