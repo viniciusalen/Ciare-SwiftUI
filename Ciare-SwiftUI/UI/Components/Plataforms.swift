@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct Plataforms: View {
-    @State var selectedNetworks: [String] = []
-    
+    @Binding var selectedNetworks: [String]
+        
     private let availableNetworks: [String] = ["Linkedin", "Facebook", "WhatsApp", "TikTok", "Twitter", "Instagram"]
     private let columns = [
         GridItem(.flexible()),
@@ -42,7 +42,15 @@ struct Plataforms: View {
 }
 
 struct Plataforms_Previews: PreviewProvider {
+    struct BindingTestHolder: View {
+        @State var test: [String] = []
+        
+        var body: some View {
+            Plataforms(selectedNetworks: $test).previewLayout(.sizeThatFits)
+        }
+    }
+    
     static var previews: some View {
-        Plataforms().previewLayout(.sizeThatFits)
+        BindingTestHolder()
     }
 }

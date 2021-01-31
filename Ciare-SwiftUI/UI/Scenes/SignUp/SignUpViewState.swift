@@ -9,9 +9,9 @@ import Foundation
 
 struct SignUpViewState: Equatable {
     var brandName: String = ""
-    var rawValue: Int = 0
     var businessArea: String = ""
     var businessName: String = ""
+    var businessType: String = "Physical"
     var location: String = ""
     var socialNetworks: [String] = []
 }

@@ -20,22 +20,22 @@ struct SignUpView: View {
                         .padding(.bottom)
                     CustomTitleText(name: "Tipo de negócio")
                     
-                    Picker("Tipo de negócio", selection: model.bindings.rawValue) {
-                        Text("Físico").tag(0)
-                        Text("Digital").tag(1)
-                        Text("Ambos").tag(2)
+                    Picker("Tipo de negócio", selection: model.bindings.businessType) {
+                        Text("Físico").tag("Physical")
+                        Text("Digital").tag("Digital")
+                        Text("Ambos").tag("Both")
                     }.pickerStyle(SegmentedPickerStyle()).padding(.bottom)
                     
                     CustomTextField(content: model.bindings.businessArea, placeholder: "Area de atuação").padding(.bottom)
                     
                     Group {
-                        if model.state.rawValue == 0{
+                        if model.state.businessType == "Physical" {
                             CustomTextField(content: model.bindings.location ,placeholder: "Localização")
-                        } else if model.state.rawValue == 1{
-                            Plataforms(selectedNetworks: model.state.socialNetworks)
-                        } else if model.state.rawValue == 2{
-                            CustomTextField(content: model.bindings.location ,placeholder: "Localização").padding(.bottom)
-                            Plataforms(selectedNetworks: model.state.socialNetworks)
+                        } else if model.state.businessType == "Digital" {
+                            Plataforms(selectedNetworks: model.bindings.socialNetworks)
+                        } else if model.state.businessType == "Both" {
+                            CustomTextField(content: model.bindings.location ,placeholder: "Localização")
+                            Plataforms(selectedNetworks: model.bindings.socialNetworks)
                         }
                     }
                 }

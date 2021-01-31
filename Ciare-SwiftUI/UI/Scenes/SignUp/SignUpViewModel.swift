@@ -14,9 +14,9 @@ final class SignUpViewModel: ObservableObject {
     
     var bindings: (
         brandName: Binding<String>,
-        rawValue: Binding<Int>,
         businessArea: Binding<String>,
         businessName: Binding<String>,
+        businessType: Binding<String>,
         location: Binding<String>,
         socialNetworks: Binding<[String]>
     ) {
@@ -25,10 +25,6 @@ final class SignUpViewModel: ObservableObject {
                 get: { self.state.brandName },
                 set: { self.state.brandName = $0 }
             ),
-            rawValue: Binding(
-                get: { self.state.rawValue },
-                set: { self.state.rawValue = $0 }
-            ),
             businessArea: Binding(
                 get: { self.state.businessArea },
                 set: { self.state.businessArea = $0 }
@@ -36,6 +32,10 @@ final class SignUpViewModel: ObservableObject {
             businessName: Binding(
                 get: { self.state.businessName },
                 set: { self.state.businessName = $0 }
+            ),
+            businessType: Binding(
+                get: { self.state.businessType },
+                set: { self.state.businessType = $0 }
             ),
             location: Binding(
                 get: { self.state.location },
@@ -53,15 +53,5 @@ final class SignUpViewModel: ObservableObject {
     }
     
     func createInformations() {
-        switch state.rawValue {
-        case 0:
-            self.businessType = "Physical"
-        case 1:
-            self.businessType = "Digital"
-        case 2:
-            self.businessType = "Both"
-        default:
-            break
-        }
     }
 }
