@@ -46,17 +46,20 @@ final class SignUpViewModel: ObservableObject {
         state = initialState
     }
     
-    func createInformations(context: NSManagedObjectContext) {
+    func createInformations(context: NSManagedObjectContext, userId: String) {
         let newUserInfo = NSEntityDescription.insertNewObject(forEntityName: "UserInformation", into: context) as! UserInformation
         
+        newUserInfo.id = userId
         newUserInfo.name = state.businessName
         newUserInfo.expertiseAreas = state.businessArea
         newUserInfo.typeBusiness = state.businessType
         newUserInfo.location = state.location
         newUserInfo.socialNetworks = state.socialNetworks
-        newUserInfo.followers = []
-        newUserInfo.following = []
+        newUserInfo.connected = []
+        newUserInfo.connections = []
         newUserInfo.partners = []
+        newUserInfo.picture = nil
+        newUserInfo.availableToPartnerships = true
         
         do {
             try context.save()

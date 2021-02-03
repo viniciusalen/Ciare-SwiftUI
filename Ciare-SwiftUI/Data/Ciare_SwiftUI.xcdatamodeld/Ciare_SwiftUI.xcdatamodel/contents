@@ -2,17 +2,18 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20B29" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
     <entity name="UserInformation" representedClassName="UserInformation" syncable="YES" codeGenerationType="class">
         <attribute name="availableToPartnerships" attributeType="Boolean" defaultValueString="YES" usesScalarValueType="YES"/>
+        <attribute name="connected" optional="YES" attributeType="Transformable" customClassName="Array&lt;String&gt;"/>
+        <attribute name="connections" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="Array&lt;String&gt;"/>
         <attribute name="expertiseAreas" optional="YES" attributeType="String"/>
-        <attribute name="followers" optional="YES" attributeType="Transformable" valueTransformerName="" customClassName="[String]"/>
-        <attribute name="following" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
         <attribute name="location" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="partners" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="partners" optional="YES" attributeType="Transformable" customClassName="Array&lt;String&gt;"/>
         <attribute name="picture" optional="YES" attributeType="Binary"/>
-        <attribute name="socialNetworks" optional="YES" attributeType="Transformable" customClassName="[String]"/>
+        <attribute name="socialNetworks" optional="YES" attributeType="Transformable" customClassName="Array&lt;String&gt;"/>
         <attribute name="typeBusiness" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="UserInformation" positionX="-63" positionY="-18" width="128" height="179"/>
+        <element name="UserInformation" positionX="-63" positionY="-18" width="128" height="194"/>
     </elements>
 </model>

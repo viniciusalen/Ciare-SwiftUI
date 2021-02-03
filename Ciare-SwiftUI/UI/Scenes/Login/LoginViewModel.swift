@@ -24,7 +24,6 @@ final class LoginViewModel: ObservableObject {
             let userId = appleIDCredential.user
             
             userSessionService.logIn(userId: userId)
-            print("\nID:\n" + userId + "\n\n")
         }
     }
     

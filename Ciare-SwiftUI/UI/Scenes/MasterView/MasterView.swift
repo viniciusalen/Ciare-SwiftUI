@@ -17,7 +17,10 @@ struct MasterView: View {
     
     func sendUserToView() -> AnyView {
         if model.hasUserSession {
-            return AnyView(SignUpView(model: .init(initialState: .init())))
+            return AnyView(
+                SignUpView(model: .init(initialState: .init()))
+                    .environmentObject(userSessionService)
+            )
         } else {
             return AnyView(LoginView(model: .init(userSessionService: userSessionService)))
         }

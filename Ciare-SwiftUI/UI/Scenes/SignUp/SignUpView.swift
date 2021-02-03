@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SignUpView: View {
     @ObservedObject var model: SignUpViewModel
+    @EnvironmentObject var userSessionService: UserSessionService
     @Environment(\.managedObjectContext) var context
     
     var body: some View {
@@ -42,11 +43,12 @@ struct SignUpView: View {
             }
             SignUpButton(title: "Finalizar", action: {
                 //TO-DO: Adicionar a var "registered" no model UserSession pra manipular quando o usuário já estiver registrado
-                model.createInformations(context: context)
+                if let userId = userSessionService.session?.userId {
+                    model.createInformations(context: context, userId: userId)
+                }
             })
         }.padding()
         .navigationBarTitle("Cadastre-se")
-        
     }
 }
 
